@@ -1,6 +1,8 @@
 package com.coursework.javacor_hw.service;
 
 import com.coursework.javacor_hw.Question;
+import com.coursework.javacor_hw.exceptions.QuestionAlreadyAddedException;
+import com.coursework.javacor_hw.exceptions.QuestionNotFoundException;
 import org.springframework.stereotype.Service;
 
 import java.util.*;

@@ -1,6 +1,7 @@
 package com.coursework.javacor_hw.service;
 
 import com.coursework.javacor_hw.Question;
+import com.coursework.javacor_hw.exceptions.NotEnoughQuestionsException;
 import org.springframework.stereotype.Service;
 
 import java.util.HashSet;
