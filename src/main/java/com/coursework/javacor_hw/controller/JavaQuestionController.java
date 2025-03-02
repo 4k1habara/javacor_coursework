@@ -1,6 +1,6 @@
 package com.coursework.javacor_hw.controller;
 
-import com.coursework.javacor_hw.Question;
+import com.coursework.javacor_hw.model.Question;
 import com.coursework.javacor_hw.service.JavaQuestionService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

@@ -1,6 +1,6 @@
 package com.coursework.javacor_hw.service;
 
-import com.coursework.javacor_hw.Question;
+import com.coursework.javacor_hw.model.Question;
 import com.coursework.javacor_hw.exceptions.QuestionAlreadyAddedException;
 import com.coursework.javacor_hw.exceptions.QuestionNotFoundException;
 import org.junit.jupiter.api.Test;
@@ -67,9 +67,7 @@ class QuestionServiceTest {
         javaQuestionService.add("a", "a");
 
         List<Question> expected = new ArrayList<Question>();
-
         expected.add(question);
-
         List<Question> actual = javaQuestionService.getAll();
 
         assertEquals(expected, actual);

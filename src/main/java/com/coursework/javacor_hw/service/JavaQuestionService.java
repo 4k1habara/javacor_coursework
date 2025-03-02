@@ -1,6 +1,6 @@
 package com.coursework.javacor_hw.service;
 
-import com.coursework.javacor_hw.Question;
+import com.coursework.javacor_hw.model.Question;
 import com.coursework.javacor_hw.exceptions.QuestionAlreadyAddedException;
 import com.coursework.javacor_hw.exceptions.QuestionNotFoundException;
 import org.springframework.stereotype.Service;
@@ -63,15 +63,13 @@ public class JavaQuestionService implements QuestionService {
     public Question getRandomQuestion() {
 
         Random rn = new Random();
-        int max = questionMap.size();
-        int randomNum = rn.nextInt(max);
-        Question question = null;
 
-        for (Map.Entry<Integer, Question> entry : questionMap.entrySet()) {
-            if (entry.getKey() == randomNum) {
-                question = entry.getValue();
-            }
-        }
+        int max = questionMap.size();
+
+        int randomNum = rn.nextInt(max);
+
+        Question question = questionMap.get(randomNum);
+
         return question;
     }
 }
