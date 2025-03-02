@@ -18,17 +18,17 @@ public class JavaQuestionController {
         this.javaQuestionService = javaQuestionService;
     }
 
-    @GetMapping("add")
+    @GetMapping("add-question")
     public Question addQuestion(@RequestParam String question, @RequestParam String answer) {
         return javaQuestionService.add(question, answer);
     }
 
-    @GetMapping("remove")
+    @GetMapping("remove-question")
     public Question removeQuestion(@RequestParam String question, @RequestParam String answer) {
         return javaQuestionService.remove(question, answer);
     }
 
-    @GetMapping("find")
+    @GetMapping("find-question")
     public Question findQuestion(@RequestParam String question, @RequestParam String answer) {
         return javaQuestionService.find(question, answer);
     }
