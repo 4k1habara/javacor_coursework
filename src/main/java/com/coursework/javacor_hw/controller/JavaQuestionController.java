@@ -1,6 +1,6 @@
 package com.coursework.javacor_hw.controller;
 
-import com.coursework.javacor_hw.model.Question;
+import com.coursework.javacor_hw.Question;
 import com.coursework.javacor_hw.service.JavaQuestionService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,17 +18,17 @@ public class JavaQuestionController {
         this.javaQuestionService = javaQuestionService;
     }
 
-    @GetMapping("add-question")
+    @GetMapping("add")
     public Question addQuestion(@RequestParam String question, @RequestParam String answer) {
         return javaQuestionService.add(question, answer);
     }
 
-    @GetMapping("remove-question")
+    @GetMapping("remove")
     public Question removeQuestion(@RequestParam String question, @RequestParam String answer) {
         return javaQuestionService.remove(question, answer);
     }
 
-    @GetMapping("find-question")
+    @GetMapping("find")
     public Question findQuestion(@RequestParam String question, @RequestParam String answer) {
         return javaQuestionService.find(question, answer);
     }

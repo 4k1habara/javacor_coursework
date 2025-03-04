@@ -1,4 +1,4 @@
-package com.coursework.javacor_hw.model;
+package com.coursework.javacor_hw;
 
 import java.util.Objects;
 
@@ -38,13 +38,5 @@ public class Question {
     @Override
     public int hashCode() {
         return Objects.hash(question, answer);
-    }
-
-    @Override
-    public String toString() {
-        return "Question{" +
-                "question='" + question + '\'' +
-                ", answer='" + answer + '\'' +
-                '}';
     }
 }
